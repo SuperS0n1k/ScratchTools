@@ -1,0 +1,15 @@
+name: Build And Deploy
+on:
+  push:
+#     branches:
+#       - master`
+
+jobs:
+  generate-build-number-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Print GITHUB_WORKSPACE
+        run: make ios
